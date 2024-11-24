@@ -1,5 +1,6 @@
 import './App.css';
 import MainTitle from './components/mainTitle/mainTitle';
+import OrderHistory from './components/OrderHistory';
 import PrimarySideBar from './components/sidebar/primary/PrimarySideBar';
 import SecondarySideBar from './components/sidebar/secondary/SecondarySideBar';
 import Title from './components/sidebar/title/Title';
@@ -22,7 +23,7 @@ function App() {
         <main class="main-content">
           <MainTitle/>
           <div className='main-content__content'>
-            
+            <OrderHistory/>
           </div>
         </main>
       </div>
