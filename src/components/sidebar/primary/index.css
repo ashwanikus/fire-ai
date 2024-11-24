@@ -23,6 +23,6 @@
 
 .primary-sidebar nav ul li:hover{
     color: var(--hover-color);
-    background-color: #2d26bc;
+    background-color: rgb(60, 96, 206);
 
 }

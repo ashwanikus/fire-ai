@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css';
+import { AppstoreOutlined } from "@ant-design/icons";
 
 const PrimarySideBar = ()=> {
     return (
@@ -7,7 +8,7 @@ const PrimarySideBar = ()=> {
             <h2>Menu</h2>
             <nav>
                 <ul>
-                <li>Accounts Overview</li>
+                <li><AppstoreOutlined />Accounts Overview</li>
                 <li>Payouts</li>
                 <li>Certificates</li>
                 <li>Leaderboard</li>

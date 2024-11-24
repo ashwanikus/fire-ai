@@ -3,7 +3,7 @@ import Footer from './components/sidebar/footer/Footer';
 import PrimarySideBar from './components/sidebar/primary/PrimarySideBar';
 import SecondarySideBar from './components/sidebar/secondary/SecondarySideBar';
 import Title from './components/sidebar/title/Title';
-import ThemeToggleButton from './components/toggleTheme';
+import ThemeToggleButton from './components/toggleTheme/toggleTheme';
 
 function App() {
   
