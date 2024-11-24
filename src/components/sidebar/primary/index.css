@@ -1,0 +1,28 @@
+.primary-sidebar{
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.primary-sidebar nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-sidebar nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-sidebar nav ul li{
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-sidebar nav ul li:hover{
+    color: var(--hover-color);
+    background-color: #2d26bc;
+
+}
