@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/reset.css';
-import { ConfigProvider } from 'antd';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
-      <App />
-    </ConfigProvider>
+    <Provider store={store}>
+        <App />
+    </Provider>
   </React.StrictMode>
 );
 

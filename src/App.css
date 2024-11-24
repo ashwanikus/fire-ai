@@ -21,10 +21,6 @@
   background-color: var(--bg-color);
 }
 
-.main-content{
-  
-}
-
 .main-content__content{
   background-color: var(--bg-color);
   border-top-right-radius: 10px;

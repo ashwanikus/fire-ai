@@ -1,34 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import { Switch } from 'antd';
 import { MoonFilled, SunFilled } from '@ant-design/icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../../store/slices/themeSlice';
 
 const ThemeToggleButton = () => {
-  const [theme, setTheme] = useState('light');
-
-  const applyTheme = (theme) => {
-    setTheme(theme);
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme); // Save theme preference
-  };
-
-  const toggleTheme = (isChecked) => {
-    const newTheme = isChecked ? 'dark' : 'light';
-    applyTheme(newTheme);
-  };
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.theme);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme); // Apply theme to document
+    localStorage.setItem('theme', theme); // Save preference to localStorage
+  },  [theme]);
 
   return (
-    <Switch className='toggleTheme'
-      style={{backgroundColor: theme === 'dark' ? '#000' : '', border: theme === 'dark' ? '1px solid #fff' : ''}}
+    <Switch
+      className="toggleTheme"
+      style={{
+        backgroundColor: theme === 'dark' ? '#000' : '',
+        border: theme === 'dark' ? '1px solid #fff' : '',
+      }}
       checked={theme === 'dark'}
       checkedChildren={<SunFilled />}
       unCheckedChildren={<MoonFilled />}
-      onChange={toggleTheme}
+      onChange={() => dispatch(toggleTheme())}
     />
   );
 };

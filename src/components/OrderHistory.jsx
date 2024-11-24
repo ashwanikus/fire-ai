@@ -3,7 +3,7 @@ import { Table, Tag } from 'antd';
 import order from '../data/order.js';
 
 const OrderHistory = () => {
-  // Define table columns
+  // Table columns definition
   const columns = [
     {
       title: 'Symbol',
@@ -14,10 +14,8 @@ const OrderHistory = () => {
       title: 'Type',
       dataIndex: 'type',
       key: 'type',
-      render: (_, { type }) => (
-        <>
-          {type === 'Buy' ? <Tag color="green">Buy</Tag> : <Tag color="red">Sell</Tag>}
-        </> 
+      render: (type) => (
+        <Tag color={type === 'Buy' ? 'green' : 'red'}>{type}</Tag>
       ),
     },
     {
@@ -72,19 +70,22 @@ const OrderHistory = () => {
     },
   ];
 
+  // Table pagination configuration
+  const paginationConfig = {
+    pageSize: 5, // Rows per page
+    showSizeChanger: true, // Allow page size changes
+    pageSizeOptions: ['5', '10', '20'], // Page size options
+    defaultCurrent: 1, // Default current page
+  };
+
   return (
     <div>
       <h2>Order Table</h2>
       <Table 
         dataSource={order} 
         columns={columns} 
-        rowKey={(record, index) => index} // Use index as a unique key
-        pagination={{
-          pageSize: 5, // Number of rows per page
-          showSizeChanger: true, // Allow user to change page size
-          pageSizeOptions: ['5', '10', '20'], // Options for page size
-          defaultCurrent: 1, // Default active page
-        }}
+        rowKey={(record, index) => index} 
+        pagination={paginationConfig} 
       />
     </div>
   );

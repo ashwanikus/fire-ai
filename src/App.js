@@ -5,6 +5,7 @@ import PrimarySideBar from './components/sidebar/primary/PrimarySideBar';
 import SecondarySideBar from './components/sidebar/secondary/SecondarySideBar';
 import Title from './components/sidebar/title/Title';
 import ThemeToggleButton from './components/toggleTheme/toggleTheme';
+import Topbar from './components/Topbar';
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
           <MainTitle/>
           <div className='main-content__content'>
             <OrderHistory/>
+            <Topbar/>
           </div>
         </main>
       </div>
