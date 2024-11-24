@@ -1,11 +1,20 @@
 .primary-sidebar{
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     z-index: 10;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--card-shadow);
 }
 
-.primary-sidebar nav{
-    display: flex;
-    flex-direction: column;
+.primary-sidebar:last-of-type{
+    border-bottom: unset;
+}
+
+.primary-sidebar h2{
+    font-size: 20px;
+    color: var(--text-color);
+    opacity: 0.5;
+    margin-bottom: 10px;
 }
 
 .primary-sidebar nav ul{
@@ -15,10 +24,14 @@
 }
 
 .primary-sidebar nav ul li{
-    padding: 10px;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
+    border-radius: 10px;
+}
+
+.primary-sidebar nav ul li > span{
+    margin-right: 10px;
 }
 
 .primary-sidebar nav ul li:hover{

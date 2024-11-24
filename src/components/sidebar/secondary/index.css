@@ -1,0 +1,28 @@
+.secondary-sidebar{
+    transition: all 0.1s ease;
+    background-color: var(--card-bg-color);
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.secondary-sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.secondary-sidebar ul li{
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--container-bg-color);
+}
+
+.secondary-sidebar ul li:last-child{
+    margin-bottom: 0;
+}

@@ -24,6 +24,7 @@ const ThemeToggleButton = () => {
 
   return (
     <Switch
+      style={{backgroundColor: theme === 'dark' ? '#000' : '', border: theme === 'dark' ? '1px solid #fff' : ''}}
       checked={theme === 'dark'}
       checkedChildren={<SunFilled />}
       unCheckedChildren={<MoonFilled />}
